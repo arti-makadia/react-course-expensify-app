@@ -1,0 +1,8 @@
+{
+    "presets": ["env", "react"],  //for all babel default plugins
+    "plugins": [
+                "transform-class-properties", //for babel class-properties plugin
+                "transform-object-rest-spread"  //for the use of object spread operator
+                ] 
+
+}
