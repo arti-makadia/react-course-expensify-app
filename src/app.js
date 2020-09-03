@@ -10,7 +10,7 @@ import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
 
-console.log('app.js is running');
+console.log('app.js is running perfectly');
 
 const store = configureStore();
 
