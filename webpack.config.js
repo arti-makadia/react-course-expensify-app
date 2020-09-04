@@ -31,6 +31,7 @@ module.exports = (env) => {
         })
       } 
     ]
+    
     },
       plugins: [ CSSExtract ],
         //to see error with file name and line
