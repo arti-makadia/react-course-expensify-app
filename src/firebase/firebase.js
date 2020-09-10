@@ -13,6 +13,7 @@ const firebaseConfig = {
     measurementId: process.env.FIREBASE_MEASUREMENT_ID
   };
 
+  /*
   const firebaseConfigDev = {
     apiKey: "AIzaSyAgTeEzgVVyQSWExabREpkNbkOzREjaR1E",
     authDomain: "expensify-998ed.firebaseapp.com",
@@ -23,10 +24,11 @@ const firebaseConfig = {
     appId: "1:605622060916:web:c5e030523c6eaee3688e21",
     measurementId: "G-H0V6HMT7W5"
   };
+*/
 
-  firebase.initializeApp(firebaseConfigDev);
+  firebase.initializeApp(firebaseConfig);
   //firebase.analytics();
-
+  
   const database = firebase.database();
 
   export { firebase, database as default };

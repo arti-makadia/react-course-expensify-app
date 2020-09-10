@@ -32,7 +32,7 @@ test('should setup add expense action object with provided values', () => {
     expense: expenses[2]
   });
 });
-
+/*
 test('should add expense to database and store', (done) => {
   const store = createMockStore({});
   const expenseData = {
@@ -85,6 +85,7 @@ test('should add expense with defaults to database and store', (done) => {
   });
 });
 
+*/
 // test('should setup add expense action object with default values', () => {
 //   const action = addExpense();
 //   expect(action).toEqual({

@@ -4,19 +4,22 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 //for change the database environment(ex. development, test, production)
+
+
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
-if(process.env.NODE_ENV === 'test'){
-  require('dotenv').config({ path: 'env.test' });
-} else if(process.env.NODE_ENV === 'development'){
-  require('dotenv').config({ path: 'env.development' });
-} 
+if (process.env.NODE_ENV === 'test') {
+  require('dotenv').config({ path: '.env.test' });
+} else if (process.env.NODE_ENV === 'development') {
+  require('dotenv').config({ path: '.env.development' });
+}
 
 module.exports = (env) => {
   const isProduction = env === 'production';
   const CSSExtract = new ExtractTextPlugin('styles.css');
 
   console.log('env', env);
+  //console.log(process.env.NODE_ENV);
   return {
     entry: {
       app: './src/app.js'
