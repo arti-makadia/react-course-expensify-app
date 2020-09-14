@@ -1,6 +1,4 @@
 import * as firebase from 'firebase';
-//import * as firebase from 'firebase/app';
-//import 'firebase/<PACKAGE>';
 
 const firebaseConfig = {
     apiKey: process.env.FIREBASE_API_KEY,
@@ -13,25 +11,13 @@ const firebaseConfig = {
     measurementId: process.env.FIREBASE_MEASUREMENT_ID
   };
 
-  /*
-  const firebaseConfigDev = {
-    apiKey: "AIzaSyAgTeEzgVVyQSWExabREpkNbkOzREjaR1E",
-    authDomain: "expensify-998ed.firebaseapp.com",
-    databaseURL: "https://expensify-998ed.firebaseio.com",
-    projectId: "expensify-998ed",
-    storageBucket: "expensify-998ed.appspot.com",
-    messagingSenderId: "605622060916",
-    appId: "1:605622060916:web:c5e030523c6eaee3688e21",
-    measurementId: "G-H0V6HMT7W5"
-  };
-*/
-
-  firebase.initializeApp(firebaseConfig);
+   firebase.initializeApp(firebaseConfig);
   //firebase.analytics();
   
   const database = firebase.database();
+  const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
-  export { firebase, database as default };
+  export { firebase, googleAuthProvider, database as default };
 
 //  //child_removed
 //database.ref('expenses').on('child_removed', (snapshot) => {
