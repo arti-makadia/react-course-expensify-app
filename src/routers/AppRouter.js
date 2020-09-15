@@ -8,6 +8,7 @@ import HelpPage from '../components/HelpPage.js';
 import NotFoundPage from '../components/NotFoundPage.js';
 import LoginPage from '../components/LoginPage.js';
 import PrivateRoute from './PrivateRoute.js';
+import PublicRoute from './PublicRoute.js';
 import { Header } from '../components/Header';
 
 
@@ -18,7 +19,7 @@ const AppRouter = () => (
     <div>
         
         <Switch>
-            <Route path='/' component={LoginPage} exact={true}  />
+            <PublicRoute path='/' component={LoginPage} exact={true}  />
             <PrivateRoute path='/dashboard' component={ExpenseDashBoardPage} />
             <PrivateRoute path='/add' component={AddExpencePage} />
             <PrivateRoute path='/edit/:id' component={EditExpencePage} />
