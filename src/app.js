@@ -10,6 +10,7 @@ import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
 import { firebase } from './firebase/firebase.js';
+import LoadingPage from './components/LoadingPage.js';
 
 console.log('app.js is running perfectly');
 
@@ -21,7 +22,7 @@ const jsx = (
     </Provider>
 );
 
-ReactDOM.render(<p>Loading...</p>, document.getElementById('appDiv'));
+ReactDOM.render(<LoadingPage />, document.getElementById('appDiv'));
 
 let hasRendered = false;
 const renderApp = () => {

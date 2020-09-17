@@ -1,0 +1,22 @@
+.box-layout {
+    background: url('/images/bg.jpg');
+    background-size: cover;
+    height: 100vh;   /* View port height  */
+    width: 100vw;    /* View port width  */
+    align-items: center;  //set login box in centre
+    display: flex;
+    justify-content: center;
+}
+
+.box-layout__box {
+    background: fade-out($color: white, $amount: .15);  //transparent box amount set 0-1
+    border-radius: 3px;
+    padding: $l-size $m-size;   //l-size for top & bottom, m-size for left & right
+    text-align: center;
+    width: 25rem;
+}
+
+.box-layout__title {
+    margin: 0 0 $m-size 0;
+    line-height: 1;
+}

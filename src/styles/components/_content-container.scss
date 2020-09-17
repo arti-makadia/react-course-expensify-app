@@ -1,0 +1,5 @@
+.content-container {    
+    margin: 0 auto;  // top-bottom=0 left-right=auto set margin according to browser size
+    padding: 0 $m-size; //top-0, others are m-size
+    max-width: 80rem;
+}
